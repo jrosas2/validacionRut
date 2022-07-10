@@ -7,62 +7,22 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="validacionRut.js"></script>
     <script>
-
         
-
         rut = prompt('ingrese un rut');
-        document.write(rut[0]+"<br>");
-        document.write(rut[1]+"<br>");
-        document.write(rut[2]+"<br>");
-        document.write(rut[3]+"<br>");
-        document.write(rut[4]+"<br>");
-        document.write(rut[5]+"<br>");
-        document.write(rut[6]+"<br>");
-        document.write(rut[7]+"<br>");
-        document.write(rut[8]+"<br>");
-        document.write(rut[9]+"<br>");
-        document.write(rut);
-        document.write("<br>")
-
-        num1 = 3 * parseInt(rut[0]);
-        num2 = 2 * parseInt(rut[1]);
-        num3 = 7 * parseInt(rut[2]);
-        num4 = 6 * parseInt(rut[3]);
-        num5 = 5 * parseInt(rut[4]);
-        num6 = 4 * parseInt(rut[5]);
-        num7 = 3 * parseInt(rut[6]);
-        num8 = 2 * parseInt(rut[7]);
+        rutValido = validacionRut(rut);
         
+        while(rutValido != rut[9]){
+            alert("Rut invalido");
+            rut = prompt("ingresa un rut correcto: ");
+            rutValido = validacionRut(rut);
+        }
+
         document.write(`
-            ${num1}<br>
-            ${num2}<br>
-            ${num3}<br>
-            ${num4}<br>
-            ${num5}<br>
-            ${num6}<br>
-            ${num7}<br>
-            ${num8}<br>
-        `)
-
-        var suma = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8;
-        
-        document.write(suma);
+            <h1>Rut correctamente ingresado</h1>
+        `);
         document.write("<br>")
-
-        division = suma / 11;
-
-        document.write(division+"<br>");
-        entero = parseInt(division);
-        document.write(entero+"<br>");
-        decimal = division - entero;
-        document.write(decimal+"<br>");
-        digito = (11-(11*(decimal)));
-        document.write(digito+"<br>");
-
-        digitoFinal = Math.round(digito);
-
-        document.write(digitoFinal+"<br>");
 
 
     </script>
