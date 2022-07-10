@@ -1,5 +1,3 @@
-
-
 function validacionRut(cedula) {
     num1 = 3 * parseInt(cedula[0]);
     num2 = 2 * parseInt(cedula[1]);
